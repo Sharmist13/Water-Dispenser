@@ -38,8 +38,8 @@ Adafruit_NeoPixel strip(led_count, led_pin, NEO_GRB + NEO_KHZ800);
 
 // Required for OTA programming
 #ifndef STASSID
-#define STASSID "network"   // enter network name
-#define STAPSK  "password"  // enter password
+#define STASSID "network"  // enter network name
+#define STAPSK  "password" // enter password
 #endif
 const char* ssid = STASSID;
 const char* password = STAPSK;
@@ -249,6 +249,7 @@ void turn_off() {
 
 
 void loop() {
+  // Required for OTA programming
   ArduinoOTA.handle();
 
   // Initially connect MQTT and reconnect if connection is lost
@@ -270,7 +271,7 @@ void loop() {
     Serial.print(gallons_str);
     Serial.println(" gallons");
     gallons_str.toCharArray(gallons_char, gallons_str.length() + 1);
-    client.publish(TOPIC, gallons_char);
+    client.publish(TOPIC, gallons_char);  // publish MQTT
 
     // Report valve open time
     /*
@@ -281,7 +282,7 @@ void loop() {
     Serial.print("valve was open for ");
     Serial.print(run_time_str);
     Serial.println(" ms");
-    client.publish(TOPIC, run_time_char);
+    client.publish(TOPIC, run_time_char); // publish MQTT
     */
 
     Serial.println("----------------------------");
