@@ -54,4 +54,4 @@ I added code to shut off the valve in the case that it was open for an abnormall
 
 #### MQTT Logging
 
-(add)
+Future work will include logging water usage to keep track of how much I am drinking and to alert me when it is time to change the filter. MQTT messaging is currently built into the code and working, but work still needs to be done one the server side to log the data and display usage metrics on a web page.
