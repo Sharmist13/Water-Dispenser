@@ -18,8 +18,8 @@ The purpose of this project was to create a water filtration system that dispens
 2.  You can find cheaper solenoid valves on Amazon or other sites, but keep in mind the following when selecting a valve:
       - Safety: It needs to be safe to use for beverage applications (should use lead free brass and safe to drink from plastics). 
       - Reliability: This is a commercial valve made specifically for this application. I would not trust a $3 valve from Amazon when installing this permanently in my house.
-3.  The sound of the solenoid valve is pretty noticeable. I may consider building an enclosure around it to reduce the noise.
-4.  It is a good idea to have a delay after the valve is open before it is allowed to close. This will prevent rapid switching of the valve that may lead to early failure.
+3.  The sound of the solenoid valve is pretty noticeable. It's no louder than the valve on a refrigerator's water dispenser, but I may consider building an enclosure around it to reduce the noise.
+4.  It is a good idea to have a delay after the valve is open before it is allowed to close. This will prevent rapid or partial switching of the valve that may lead to early failure.
 
 #### IR Sensor
 
@@ -33,7 +33,7 @@ The purpose of this project was to create a water filtration system that dispens
 
 #### NeoPixel LED strip
 
-Because the ESP module uses 3.3V for the GPIO pins, a level shifter was required for the 5V NeoPixel strip. Although you can get by without a level shifter for most applications, to do very quick changes such as fading all of the LEDs on/off the level shifter was required. Without it, the LED had unstable behavior.
+Because the ESP module uses 3.3V for the GPIO pins, a level shifter was required for the 5V NeoPixel strip. Although you can get by without a level shifter for most applications, to do very quick changes such as fading all of the LEDs on/off the level shifter was required. Without it, the strip had unstable and erratic behavior.
 
 Using addressable LEDs was overkill for this project, but used mostly for learning purposes. This could have easily been completed with regular LEDs. Maybe I'll add some light animations in the future.
 
