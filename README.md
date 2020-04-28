@@ -48,6 +48,11 @@ When fading LEDs with PWM, the light output levels do not scale linearly. Theref
 
 I added code to shut off the valve in the case that it was open for an abnormally long amount of time. This could be the result of a faulty sensor, disconnected sensor signal wire, stuck switch, electrical short, blocked sensor, etc. In addition, the LEDs will display an error (flashing red), and the system will have to be manually reset before it is allowed to be used again.
 
+#### Google Sheets logging
+
+Tutorial for logging data to Google Sheets:
+https://github.com/StorageB/Google-Sheets-Logging
+
 #### MQTT Data Logging
 
 Future work will include logging water usage to keep track of how much I am drinking and to alert me when it is time to change the filter. MQTT messaging is currently built into the code and working, but work still needs to be done one the server side to log the data and display usage metrics on a web page.
