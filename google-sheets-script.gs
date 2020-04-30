@@ -1,7 +1,7 @@
 // Automatic Water Dispenser - Google Script code
 // https://github.com/StorageB/Water-Dispenser
 //
-// Google Sheets logging information:
+// Google Sheets logging setup:
 // https://github.com/StorageB/Google-Sheets-Logging
 //
 // This code uses the HTTPSRedirect library by Sujay Phadke
